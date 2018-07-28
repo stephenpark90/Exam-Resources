@@ -40,7 +40,7 @@ int line_finder(char* buffer, int lineNumber)
 		if(counter == lineNumber)  //if need to find Name or string in file need to use strcmp or strstr (THIS IF line SHOULD BE THE ONLY ONE CHANGED IF NEEDING TO FIND A NAME not LINE)
 		{
 			memset(buffer, 0, 64); //can modify buffer here if need be instead of changing u top
-			strncpy(buffer, line, 63);
+			strncpy(buffer, line, 63); //use 63 instead of 64 to account for null terminator
 			fclose(fp);
 			printf("%s", line);  //just for testing purposes, just to make sure you are getting the right line number out
 			return strlen(buffer);
