@@ -5,14 +5,14 @@
 
 //Strings, Arrays, and Pointers
 
-int main(int arc, char ** argv)
+int main(int argc, char ** argv)
 {
 
 	char name[] = "Name";
 	char name2[] = "Another";
 	char name3[] = "Third";
 	char *greeting = "Hello to %s and %s and %s\n";
-	char *output = malloc(sizeof(char) * 128); //allocate memory
+	char *output = malloc(sizeof(char) * 128);
 
 	int primes[] = {1,2,3,5,7,11,13,17}
 
@@ -25,8 +25,8 @@ int main(int arc, char ** argv)
 
 
 
-	sprintf(output, greeting, name, name2, name3); //output is targeted at a string, basically a printf but a string (that 128 bytes, that greeting, and name)
-	printf(output); 
+	sprintf(output, greeting, name, name2, name3); //output is the dynamic memory we allocated, greeting name name2 name3 are inserted to the target, output 
+	printf(output); //now that the strings are copied to 'output', we print 
 
 
 	for (int i = 0; i < sizeof(primes)/sizeof(primes[0]); i++)
