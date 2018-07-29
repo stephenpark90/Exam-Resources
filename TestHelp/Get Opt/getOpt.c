@@ -12,27 +12,27 @@
 
 //GETOPT EXAMPLE
 
-int main(int argc, char *argv[])
+int main(int argc, char **argv)
 {
 		int flags, opt;
 		int nsecs, tfnd;
 			char *filename = NULL;
 
-		nsecs = 0;
+		nsecs = 0; //need to initialize these flags to 0, otherwise you will get garbage
 		tfnd = 0;
 		flags = 0;
-		while ((opt = getopt(argc, argv, "nt:f:")) != -1) //f is for the file option, get rid of it or add(f:) if need be(this is just for file cases)
+		while ((opt = getopt(argc, argv, "nt:f:")) != -1) //while opt does not return error, execute code
 		{
 			switch (opt) {
 			case 'n':
 				flags = 1;
 				break;
 			case 't':
-				nsecs = atoi(optarg);
-				tfnd = 1;
+				nsecs = atoi(optarg);//optarg is the input that follows after -t flag, and is converted to integers andassigned to nsecs
+				tfnd = 1; //tfnd flag is changed to 1
 				break;
 			case 'f':
-				filename = optarg;
+				filename = optarg;//since we are expecting string of characters, no need to convert atoi
 				break;
 			default: /* '?' */
 				fprintf(stderr, "Usage: %s [-t nsecs] [-n] name\n",
@@ -54,8 +54,7 @@ int main(int argc, char *argv[])
 
 
 		if (optind >= argc) //if only concerned with printing out a certain amount of lines (in IF statement it should look like (optind+1 >= argc)) 
-		{
-
+		{ //optind is the index of the next element of argv[]. the arguments entered in command line should not exceed argumentcouneter(argc)
 		fprintf(stderr, "expected arguement after options\n");
 		exit(EXIT_FAILURE);
 		}
