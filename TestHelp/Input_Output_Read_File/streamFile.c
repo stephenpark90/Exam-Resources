@@ -9,10 +9,10 @@
 int main(void)
 {
 	FILE* fp = fopen("sshd_config","r");
-	if(fopen == NULL)
+	if(fp == NULL)
 	{
 		fprintf(stderr,"error: cannot write file TRY AGAIN\n");
-		exit(EXIT_FAILURE);
+		exit(EXIT_FAILURE); //or you can return -1;
 	}
 
 char buffer[64];	
@@ -21,11 +21,10 @@ char buffer[64];
 //fgets(it will grab a string from the file)
 	while(fgets(buffer,64,fp) != NULL)
 	{
-		//need to get the lines whose first non-whitespace character is a # sign AND empty lines are interpreted by characters
-		if(buffer == '#' && buffer == '\n')
+		//need to get the lines whose first non-whitespace character is a # sign OR empty lines are interpreted by characters
+		if(buffer == '#' || buffer == '\n')
 		{
 			continue;
-
 		}
 		else 
 		{
