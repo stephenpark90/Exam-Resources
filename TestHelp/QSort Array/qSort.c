@@ -27,26 +27,15 @@ int main(void)
 {
     const size_t num_elem = 10;
     int elements[10] = { 3, 6, 1, 9, 8, 2, 0, 5, 7, 4 };
-	int i = 0;
-	
-	/*
-	while(i < 10)
-	{
-		printf("%d\n", elements[i]);
-		i++;
-	}
-	*/
 
         qsort(elements, num_elem, sizeof(int), compare_int);
 
-        int j = 0;
-	while(j < 10)
+        int i = 0;
+	while(i < 10)
 	{
-		printf("%d\n", elements[j]);
-		//printf("%d\t", elements[j]);  prints out in tab format, can change if need be
+		printf("%d\n", elements[i]);
 		j++;
 	}  
-	
 
 return 0;
 }
