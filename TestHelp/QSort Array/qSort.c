@@ -15,10 +15,10 @@
 //copy and past this few lines in code and the exam might say wrong but flip < to > or swap -1 : 1 to 1 : -1
 //change all ints to long pointers IF THE TEST has different TYPES
 
-int compare_int( const void* a, const void* b ) 
+int compare_int( const void* a, const void* b ) //a and b are pointers to an array. we are comparing two constants
 { 
-     if( *(int*)a == *(int*)b ) return 0;
-     return *(int*)a < *(int*)b ? -1 : 1;  // b < a = decending order,, a < b accending order
+     if( *(int*)a == *(int*)b ) return 0; //deference memory of a and b after typecasting them as integer pointers
+     return *(int*)a < *(int*)b ? -1 : 1;  // b < a = decending order,, a < b accending order --> if a < b, then -1; else return 1
 }  
 
 
