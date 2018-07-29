@@ -24,10 +24,10 @@ int main(int argc, char **argv)
 	}
 
 
-	//takes the second argument and turns it into a unsigned int
-	//checks the value of a specific bit
+	/*checks the value of a specific bit. notice the typecast for unsigned int, in order to allow for ANDing. atoi changes from
+	ASCII to integer. the logical '&' symbol will AND the argv[2] with 0x2 */
 	if (argc > 2 && ((unsigned int)atoi(argv[2])) & 0x2) //the 0x2 here and 0x800 below are values that should be given on test
-	{							//notice the typecast for unsigned int. this is to allow for ANDing
+	{
 		returnCode = returnCode | 0x800;
 	}
 
