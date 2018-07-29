@@ -14,15 +14,15 @@ return the number of bytes copied in the buffer or -1 if a failure occured
 */
 
 
-int line_finder(char* buffer, int lineNumber);
+int line_finder(char buffer, int lineNumber);
 
 int main()
 {
-	char* buffer[128];  //question asks to keep buff at 64 so change number here and later down the next char to 64 if need be
-	line_finder(*buffer, 5);  //5 is the line number that is found
+	char buffer[128];  //question asks to keep buff at 64 so change number here and later down the next char to 64 if need be
+	line_finder(buffer, 5);  //5 is the line number that is found
 }
 
-int line_finder(char* buffer, int lineNumber)
+int line_finder(char buffer, int lineNumber)//buffer is being called, and 
 {
 	FILE *fp = fopen("test.txt", "r"); //path in path means no quotes (if need to reference a path not a file) for test.txt just write out path
 	
@@ -58,15 +58,15 @@ int line_finder(char* buffer, int lineNumber)
 
 
 /*
-int line_finder(char* buffer, int lineNumber);
+int line_finder(char buffer);
 
 int main()
 {
 	char buffer[128];  //question asks to keep buff at 64 so change number here and later down the next char to 64 if need be
-	line_finder(buffer, 6);  //6 is the line number that is found
+	line_finder(buffer); 
 }
 
-int line_finder(char* buffer, int lineNumber)
+int line_finder(char buffer, int lineNumber)
 {
 	FILE *fp = fopen("test.txt", "r"); //path in path means no quotes for test.txt just write out path
 	
@@ -81,7 +81,7 @@ int line_finder(char* buffer, int lineNumber)
 
 	while(fgets(line, sizeof(line), fp) != NULL)  //if question asks to not to modify buffer do not add buff where the first line is
         {
-		if(strstr(line, "Jason") == line)  
+		if(strstr(line, "Jason") == line)  --> IF Jason is part of the line, and if Jason at the beginning of the string, then execute code
 		{
 			memset(buffer, 0, 64); //can modify buffer here if need be instead of changing u top
 			strncpy(buffer, line, 63);
