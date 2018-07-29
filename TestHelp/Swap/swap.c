@@ -6,15 +6,13 @@
 
 void orderParms(short *p1, short *p2)
 {
-	if (*p1 < *p2) //acending order declaration here
+	if (*p1 < *p2) //ascending order declaration here (if descending, flip operator to '>')
 	{
-		//do nothing
 		printf("Already in order\n");
 	}
 	else
 	{
 		//swap the values if not in ascending order
-		//set the value for what p1 holds to
 		short temp = *p1;
 			*p1 = *p2;
 			*p2 = temp;
