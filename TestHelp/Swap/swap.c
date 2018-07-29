@@ -6,7 +6,7 @@
 
 void orderParms(short *p1, short *p2)
 {
-	if (*p1 < *2) //acending order declaration here
+	if (*p1 < *p2) //acending order declaration here
 	{
 		//do nothing
 		printf("Already in order\n");
