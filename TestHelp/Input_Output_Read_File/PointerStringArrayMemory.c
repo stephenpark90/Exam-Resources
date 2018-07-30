@@ -7,7 +7,6 @@
 
 int main(int argc, char ** argv)
 {
-
 	char name[] = "Name";
 	char name2[] = "Another";
 	char name3[] = "Third";
@@ -22,12 +21,8 @@ int main(int argc, char ** argv)
 		return 1;
 	}
 
-
-
-
 	sprintf(output, greeting, name, name2, name3); //output is the dynamic memory we allocated, greeting name name2 name3 are inserted to the target, output 
 	printf(output); //now that the strings are copied to 'output', we print 
-
 
 	for (int i = 0; i < sizeof(primes)/sizeof(primes[0]); i++)
 	{
