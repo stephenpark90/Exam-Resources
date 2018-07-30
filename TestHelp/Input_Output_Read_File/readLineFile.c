@@ -32,7 +32,7 @@ int line_finder(char buffer, int lineNumber)//buffer is being called, and
 	return(EXIT_FAILURE);
 	}
 
-        int counter =1; //counter that counts the lines (this example 1 line)
+        int counter = 1; //counter that counts the lines (this example 1 line)
 	char line[128] = {0};
 
 	while(fgets(line, sizeof(line), fp) != NULL)  //if question asks to not to modify buffer do not add buff where the first line is
