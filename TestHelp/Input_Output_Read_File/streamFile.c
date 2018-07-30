@@ -16,12 +16,10 @@ int main(void)
 	}
 
 char buffer[64];	
-
-//Need if/else statements and a while loop
-//fgets(it will grab a string from the file)
+//fgets grabs a string from the file
 	while(fgets(buffer,64,fp) != NULL)
 	{
-		//need to get the lines whose first non-whitespace character is a # sign OR empty lines are interpreted by characters
+	//need to get the lines whose first non-whitespace character is a # sign OR empty lines are interpreted by characters
 		if(buffer == '#' || buffer == '\n')
 		{
 			continue;
