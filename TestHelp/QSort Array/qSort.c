@@ -1,8 +1,4 @@
 /*******************************************************************************
-*  FILE NAME : qsort_ex.c
-*  AUTHOR : Jason Enochs 
-*  CREATION DATE : 12-Feb-2018
-*  LAST MODIFIED : 12-Feb-2018
 *  DESCRIPTION : Example using qsort to sort an array
 *
 *******************************************************************************/
