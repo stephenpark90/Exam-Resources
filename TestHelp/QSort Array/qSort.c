@@ -34,7 +34,7 @@ int main(void)
 	while(i < 10)
 	{
 		printf("%d\n", elements[i]);
-		j++;
+		i++;
 	}  
 
 return 0;
