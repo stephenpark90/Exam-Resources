@@ -17,7 +17,7 @@ int main(void)
 
 char buffer[64];	
 //fgets grabs a string from the file
-	while(fgets(buffer,64,fp) != NULL)
+	while( fgets(buffer,64,fp) != NULL)
 	{
 	//need to get the lines whose first non-whitespace character is a # sign OR empty lines are interpreted by characters
 		if(buffer == '#' || buffer == '\n')
