@@ -12,7 +12,7 @@
 void q(int **arr, int rows, int cols)
 {
 	//Finding the max value of that array
-	int max = 0; //INT_MIN works to
+	int max = 0; //INT_MIN works too
 
 	for(int i = 0; i < rows; i++)
 		for(int j = 0; j < cols; j++)
